@@ -1,0 +1,22 @@
+package com.company;
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int factorial = 1;
+        System.out.print("Введите N");
+        double N = input.nextDouble();
+        System.out.print("Введите x");
+        double x = input.nextDouble();
+        double result = 0;
+        for (int i=0; i<=N; i++){
+            for (int s = 1; s < 2 * i; s++){
+                factorial *= s;
+            }
+            double cosX = (Math.pow(-1, i) * Math.pow(x, 2 * i)) / factorial ;
+            result += cosX;
+        }
+        System.out.print (result);
+    }
+}
